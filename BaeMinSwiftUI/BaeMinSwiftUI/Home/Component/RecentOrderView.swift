@@ -29,7 +29,7 @@ struct RecentOrderView: View {
             }
             .padding(.vertical, 10)
             
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(recentOrders) { order in
                         VStack(alignment: .leading) {

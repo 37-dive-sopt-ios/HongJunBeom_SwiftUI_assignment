@@ -30,7 +30,7 @@ struct RankingView: View {
             }
             .padding(.vertical)
             
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(rankings) { ranking in
                         VStack(alignment: .leading, spacing: 4) {

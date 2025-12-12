@@ -35,7 +35,7 @@ struct DiscountStoreView: View {
                     .frame(width: 66, height: 59)
             }
             
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(recentOrders) { order in
                         VStack(alignment: .leading) {
