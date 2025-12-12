@@ -54,13 +54,13 @@ struct CategoryTabView: View {
                 ForEach(categories) { category in
                     Text(category.title)
                         .font(.head_b_18)
-                        .foregroundStyle(isSelected(category.id) ? .baeminBlack : .baeminGray300)
+                        .foregroundStyle(selectedCategory == category.id ? .baeminBlack : .baeminGray300)
                         .padding(.bottom, 10)
                         .overlay(
                             Rectangle()
                                 .fill(Color.black)
                                 .frame(height: 3)
-                                .opacity(isSelected(category.id) ? 1 : 0), alignment: .bottom
+                                .opacity(selectedCategory == category.id ? 1 : 0), alignment: .bottom
                         )
                         .onTapGesture {
                             withAnimation {
@@ -71,10 +71,6 @@ struct CategoryTabView: View {
             }
         }
         .padding(.horizontal)
-    }
-    
-    private func isSelected(_ id: Int) -> Bool {
-        selectedCategory == id
     }
 }
 
