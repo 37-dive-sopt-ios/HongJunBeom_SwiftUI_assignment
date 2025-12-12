@@ -10,9 +10,14 @@ import SwiftUI
 struct HomeNavigationView: View {
     var body: some View {
         HStack {
-            Text("우리집")
-                .font(.head_b_16)
-                .padding()
+            HStack(spacing: 4) {
+                Text("우리집")
+                    .font(.head_b_16)
+                Image(.polygon)
+                    .resizable()
+                    .frame(width: 8, height: 5)
+            }
+            .padding()
             
             Spacer()
             
