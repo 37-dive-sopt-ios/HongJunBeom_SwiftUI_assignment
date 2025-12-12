@@ -22,7 +22,6 @@ struct SearchBar: View {
             }
             .frame(width: 343, height: 40)
             .padding(.horizontal, 16)
-            .background(Color.white)
             .cornerRadius(25)
             .overlay(
                 RoundedRectangle(cornerRadius: 25)
@@ -30,5 +29,6 @@ struct SearchBar: View {
             )
         }
         .buttonStyle(PlainButtonStyle())
+        .background(Color.baeminBackgroundWhite)
     }
 }
